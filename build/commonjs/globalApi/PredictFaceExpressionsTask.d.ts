@@ -9,8 +9,8 @@ import { PredictAllAgeAndGenderTask, PredictAllAgeAndGenderWithFaceAlignmentTask
 export declare class PredictFaceExpressionsTaskBase<TReturn, TParentReturn> extends ComposableTask<TReturn> {
     protected parentTask: ComposableTask<TParentReturn> | Promise<TParentReturn>;
     protected input: TNetInput;
-    protected extractedFaces?: (HTMLCanvasElement | tf.Tensor<tf.Rank.R3>)[] | undefined;
-    constructor(parentTask: ComposableTask<TParentReturn> | Promise<TParentReturn>, input: TNetInput, extractedFaces?: (HTMLCanvasElement | tf.Tensor<tf.Rank.R3>)[] | undefined);
+    protected extractedFaces?: (HTMLCanvasElement | tf.Tensor3D)[] | undefined;
+    constructor(parentTask: ComposableTask<TParentReturn> | Promise<TParentReturn>, input: TNetInput, extractedFaces?: (HTMLCanvasElement | tf.Tensor3D)[] | undefined);
 }
 export declare class PredictAllFaceExpressionsTask<TSource extends WithFaceDetection<{}>> extends PredictFaceExpressionsTaskBase<WithFaceExpressions<TSource>[], TSource[]> {
     run(): Promise<WithFaceExpressions<TSource>[]>;

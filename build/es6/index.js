@@ -1,4 +1,6 @@
 import { __assign } from "tslib";
+// Polyfill for IE support
+import 'core-js/features/string/ends-with';
 import * as tf from '@tensorflow/tfjs-core';
 import { draw as drawBase } from 'tfjs-image-recognition-base';
 import * as drawExtended from './draw';

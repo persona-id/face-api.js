@@ -13,7 +13,7 @@ export declare class DetectFaceLandmarksTaskBase<TReturn, TParentReturn> extends
     protected input: TNetInput;
     protected useTinyLandmarkNet: boolean;
     constructor(parentTask: ComposableTask<TParentReturn> | Promise<TParentReturn>, input: TNetInput, useTinyLandmarkNet: boolean);
-    protected readonly landmarkNet: FaceLandmark68Net | FaceLandmark68TinyNet;
+    protected get landmarkNet(): FaceLandmark68Net | FaceLandmark68TinyNet;
 }
 export declare class DetectAllFaceLandmarksTask<TSource extends WithFaceDetection<{}>> extends DetectFaceLandmarksTaskBase<WithFaceLandmarks<TSource>[], TSource[]> {
     run(): Promise<WithFaceLandmarks<TSource>[]>;

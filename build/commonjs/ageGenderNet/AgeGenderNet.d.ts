@@ -5,7 +5,7 @@ import { AgeAndGenderPrediction, NetOutput, NetParams } from './types';
 export declare class AgeGenderNet extends NeuralNetwork<NetParams> {
     private _faceFeatureExtractor;
     constructor(faceFeatureExtractor?: TinyXception);
-    readonly faceFeatureExtractor: TinyXception;
+    get faceFeatureExtractor(): TinyXception;
     runNet(input: NetInput | tf.Tensor4D): NetOutput;
     forwardInput(input: NetInput | tf.Tensor4D): NetOutput;
     forward(input: TNetInput): Promise<NetOutput>;

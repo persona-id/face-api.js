@@ -9,11 +9,11 @@ export declare class FaceLandmarks implements IFaceLandmarks {
     protected _positions: Point[];
     protected _imgDims: Dimensions;
     constructor(relativeFaceLandmarkPositions: Point[], imgDims: IDimensions, shift?: Point);
-    readonly shift: Point;
-    readonly imageWidth: number;
-    readonly imageHeight: number;
-    readonly positions: Point[];
-    readonly relativePositions: Point[];
+    get shift(): Point;
+    get imageWidth(): number;
+    get imageHeight(): number;
+    get positions(): Point[];
+    get relativePositions(): Point[];
     forSize<T extends FaceLandmarks>(width: number, height: number): T;
     shiftBy<T extends FaceLandmarks>(x: number, y: number): T;
     shiftByPoint<T extends FaceLandmarks>(pt: Point): T;

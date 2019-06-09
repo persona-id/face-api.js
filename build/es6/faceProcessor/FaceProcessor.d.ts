@@ -5,7 +5,7 @@ import { NetParams } from './types';
 export declare abstract class FaceProcessor<TExtractorParams extends FaceFeatureExtractorParams | TinyFaceFeatureExtractorParams> extends NeuralNetwork<NetParams> {
     protected _faceFeatureExtractor: IFaceFeatureExtractor<TExtractorParams>;
     constructor(_name: string, faceFeatureExtractor: IFaceFeatureExtractor<TExtractorParams>);
-    readonly faceFeatureExtractor: IFaceFeatureExtractor<TExtractorParams>;
+    get faceFeatureExtractor(): IFaceFeatureExtractor<TExtractorParams>;
     protected abstract getDefaultModelName(): string;
     protected abstract getClassifierChannelsIn(): number;
     protected abstract getClassifierChannelsOut(): number;

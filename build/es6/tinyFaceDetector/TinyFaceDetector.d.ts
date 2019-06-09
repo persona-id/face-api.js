@@ -3,7 +3,7 @@ import { Point, TfjsImageRecognitionBase, TNetInput } from 'tfjs-image-recogniti
 import { FaceDetection } from '../classes';
 export declare class TinyFaceDetector extends TfjsImageRecognitionBase.TinyYolov2 {
     constructor();
-    readonly anchors: Point[];
+    get anchors(): Point[];
     locateFaces(input: TNetInput, forwardParams: TfjsImageRecognitionBase.ITinyYolov2Options): Promise<FaceDetection[]>;
     protected getDefaultModelName(): string;
     protected extractParamsFromWeigthMap(weightMap: tf.NamedTensorMap): {

@@ -6,12 +6,12 @@ import { NetParams } from './types';
 export declare class SsdMobilenetv1 extends NeuralNetwork<NetParams> {
     constructor();
     forwardInput(input: NetInput): {
-        boxes: tf.Tensor<tf.Rank.R2>[];
-        scores: tf.Tensor<tf.Rank.R1>[];
+        boxes: tf.Tensor2D[];
+        scores: tf.Tensor1D[];
     };
     forward(input: TNetInput): Promise<{
-        boxes: tf.Tensor<tf.Rank.R2>[];
-        scores: tf.Tensor<tf.Rank.R1>[];
+        boxes: tf.Tensor2D[];
+        scores: tf.Tensor1D[];
     }>;
     locateFaces(input: TNetInput, options?: ISsdMobilenetv1Options): Promise<FaceDetection[]>;
     protected getDefaultModelName(): string;
