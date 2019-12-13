@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
 // Polyfill for IE support
 require("core-js/features/string/ends-with");
+require("core-js/features/object/assign");
 var tf = require("@tensorflow/tfjs-core");
 exports.tf = tf;
 var tfjs_image_recognition_base_1 = require("tfjs-image-recognition-base");

@@ -1,4 +1,5 @@
 import 'core-js/features/string/ends-with';
+import 'core-js/features/object/assign';
 import * as tf from '@tensorflow/tfjs-core';
 import { draw as drawBase } from 'tfjs-image-recognition-base';
 import * as drawExtended from './draw';
